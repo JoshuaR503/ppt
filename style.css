@@ -1,0 +1,32 @@
+body {
+    background-color: #edeef0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65vh; /* Toma el 100% de la altura de la ventana */
+}
+
+h1, p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    margin: 0.75rem;
+    text-align: center;  
+}
+
+h1 {
+    color: #76c17b; 
+    font-size: 3.5rem;
+}
+
+p {
+    color: #c15254;
+    font-size: 2.5rem;
+}
+
+img {
+    height: 400px;
+    width: 200px;
+}
