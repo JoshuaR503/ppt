@@ -4,7 +4,6 @@
 // let = variables que pueden cambiar su valor
 // var = variables globales **** 
 
-
 // guardar el movimiento del usuario
 let userChoice; 
 
