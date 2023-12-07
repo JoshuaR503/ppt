@@ -1,20 +1,62 @@
 
+// const, let, var
+// const = variables cuyo valor no puede cambiar
+// let = variables que pueden cambiar su valor
+// var = variables globales **** 
+
+
+// guardar el movimiento del usuario
+let userChoice; 
 
 const papel = document.querySelector("#papel");
 const piedra = document.querySelector("#piedra");
-const tijeras =document.querySelector("#tijeras");
+const tijeras = document.querySelector("#tijeras");
+const mensajeMovimiento = document.querySelector("#movimiento");
+const mensajeComputadora = document.querySelector("#movimientoComputadora");
+
+
 
 papel.addEventListener('click', () => {
-    console.log("usuario le dio click a nuestra foto")
+    userChoice = "papel";
+    mensajeMovimiento.textContent = `${userChoice}`;
+    escojerValor ();
 })
 
 piedra.addEventListener('click', () => {
-    console.log("usuario escojio piedra")
+    userChoice = "piedra";
+    mensajeMovimiento.textContent = `${userChoice}`;
+    escojerValor ();
 })
 
 tijeras.addEventListener('click', () => {
-    console.log("usuario escojio tijeras")
+    userChoice = "tijeras";
+    mensajeMovimiento.textContent = `${userChoice}`;
+    escojerValor ();
+
 })
+
+const escojerValor = () => {
+
+    const valores = ["piedra", "papel", "tijera"];
+
+    const numeroRandom = Math.random();
+    const limite = valores.length;
+
+    console.log(numeroRandom);
+
+    console.log(numeroRandom * limite);
+    // Generar un índice aleatorio
+    const indiceAleatorio = Math.floor(numeroRandom * limite);
+
+
+    // Obtener el valor aleatorio
+    const valorAleatorio = valores[indiceAleatorio]; 
+    console.log(valorAleatorio);
+
+    mensajeComputadora.textContent = `${valorAleatorio}`;
+}
+
+
 
 
 // arrays -> una estructura de datos que guarda informacion del mismo tipo
